@@ -6,9 +6,13 @@ const loginSchema = joi.object({
 })
 
 const loginValidation = (req,res,next) => {
-    const validation = loginSchema.validate(req.body)
-    if(validation.error) return res.json({success:false,error:validation.error.message})
-    next()
+    try{
+        const validation = loginSchema.validate(req.body)
+        if(validation.error) return res.json({success:false,error:validation.error.message})
+        next()
+    }catch(err){
+        res.json({success:false,error:err.message})
+    }
 }
 
 export default loginValidation

@@ -5,9 +5,13 @@ const forgotPasswordSchema = joi.object({
 })
 
 const forgotPasswordValidation = (req,res,next) => {
-    const validation = forgotPasswordSchema.validate(req.body)
-    if(validation.error) return res.json({success:false,error:validation.error.message})
-    next()
+    try{
+        const validation = forgotPasswordSchema.validate(req.body)
+        if(validation.error) return res.json({success:false,error:validation.error.message})
+        next()
+    }catch(err){
+        res.json({success:false,error:err.message})
+    }
 }
 
 export default forgotPasswordValidation

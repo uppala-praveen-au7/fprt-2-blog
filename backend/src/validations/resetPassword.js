@@ -7,9 +7,13 @@ const resetPasswordSchema = joi.object({
 })
 
 const resetPasswordValidation = (req,res,next) => {
-    const validation = resetPasswordSchema.validate(req.body)
-    if(validation.error) return res.json({success:false,error:validation.error.message})
-    next()
+    try{
+        const validation = resetPasswordSchema.validate(req.body)
+        if(validation.error) return res.json({success:false,error:validation.error.message})
+        next()
+    }catch(err){
+        res.json({success:false,error:err.message})
+    }
 }
 
 export default resetPasswordValidation
