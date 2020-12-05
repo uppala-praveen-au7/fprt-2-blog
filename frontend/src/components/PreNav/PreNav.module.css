@@ -1,0 +1,9 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: blueviolet;
+    height: 10vh;
+}

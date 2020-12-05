@@ -1,9 +1,11 @@
 import React from 'react'
 import logo from "./HoneyB.jpg"
+
+import classes from "./Logo.module.css"
 const Logo = (props) => {
     return (
-        <div>
-            <img src={logo} alt="Logo"/>
+        <div className={classes.logo_container} >
+            <img className={classes.logo} src={logo} alt="Logo"/>
         </div>
     )
 }

@@ -1,13 +1,12 @@
 import React from 'react'
 import Logo from "../Logo/Logo"
-import Signup from "../Signup/Signup"
-import Login from "../Login/Login"
+import PreNavRight from "../PreNavRight/PreNavRight"
+import classes from "./PreNav.module.css"
 const PreNav = (props) => {
     return (
-        <nav>
+        <nav className={classes.nav} >
             <Logo/>
-            <Signup/>
-            <Login/>
+            <PreNavRight/>
         </nav>
     )
 }
