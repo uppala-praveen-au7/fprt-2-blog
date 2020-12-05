@@ -21,7 +21,7 @@ mongoose.connect(process.env.DB_CONNECTION,{
 .then(()=>console.log('Database connected'))
 .catch(err=>console.log(err))
 
-app.use('/',(req,res)=>{
+app.use('/app/v1',(req,res)=>{
     res.send('Welcome to Blog backend')
 })
 
