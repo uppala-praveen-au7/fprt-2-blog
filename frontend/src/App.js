@@ -1,11 +1,12 @@
 
 import './App.css';
-import PreNav from './components/PreNav/PreNav';
+import LandingPage from './components/LandingPage/LandingPage';
+
 
 function App() {
   return (
     <div className="App">
-      <PreNav/>
+      <LandingPage/>
     </div>
   );
 }
