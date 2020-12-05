@@ -2,3 +2,14 @@
     display: inline-flex;
     padding-right: 20px;
 }
+
+.link{
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 10px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.link:hover{
+    color: coral;
+}
