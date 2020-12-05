@@ -1,0 +1,8 @@
+.post_list{
+    list-style-type: none;
+   overflow: scroll;
+}
+
+.posts_container{
+    margin: 80px 0 0 0;
+}
